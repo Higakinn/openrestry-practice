@@ -1,0 +1,7 @@
+version: '2'
+services:
+  openresty:
+    image: openresty/openresty:alpine
+    tty: true
+    ports:
+      - 8034:80
