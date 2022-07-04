@@ -3,5 +3,6 @@ services:
   openresty:
     build: .
     tty: true
+    working_dir: /usr/local/openresty/nginx
     ports:
       - 8034:80
