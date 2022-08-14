@@ -6,3 +6,25 @@ services:
     working_dir: /usr/local/openresty/nginx
     ports:
       - 8034:80
+  postgres:
+    image: postgres:13.7-alpine
+    tty: true
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: test
+  nginx:
+    image: nginx:1.22.0-alpine
+    tty: true
+    volumes:
+      - ./nginx-cond/:/etc/nginx/conf.d/
+    ports:
+      - 8035:80
+  backend1:
+    build: ./fastapi
+    tty: true
+  backend2:
+    build: ./echo
+    tty: true
+    volumes:
+      - ./echo/src/:/go/src
+

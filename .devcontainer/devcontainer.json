@@ -15,7 +15,7 @@
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/usr/local/openresty/nginx",
 	"extensions": [
-		"yinfei.luahelper"
+		"william-voyek.vscode-nginx"
 	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
